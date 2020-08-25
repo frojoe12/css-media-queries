@@ -11,12 +11,14 @@
   --button-background-color-hover: rgb(0, 157, 120);
   --button-text-color: rgba(255, 255, 255, 0.9);
   --border-color: #bbb;
+  --font-size: 20px;
+  --smaller-font-size: 16px;
 }
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: var(--font-size);
   background: var(--background-color);
   color: var(--text-color);
 }
@@ -45,8 +47,8 @@ article h2 {
   margin: 0;
 }
 article p {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 article a {
   display: block;
@@ -61,6 +63,81 @@ article a {
 article a:hover {
   background-color: var(--button-background-color-hover);
 }
+.fa-seedling {
+  color: blue;
+  font-size: 3em;
+}
 
-@media screen and (min-width: 800px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  article {
+    background-color: #aaa;
+  }
+}
+
+@media (max-width: 800px) {
+  article {
+    flex-basis: 48.5%;
+  }
+}
+
+@media (max-width: 500px) {
+  article {
+    flex-basis: 100%;
+  }
+}
+
+@media print {
+  article {
+    flex-basis: 100%;
+    border: none;
+  }
+  p a {
+    display: none;
+  }
+}
+
+@media (max-height: 700px) {
+  body {
+    font-size: var(--smaller-font-size);
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fa-seedling {
+    color: red;
+    font-size: 2em;
+  }
+}
+@media (monochrome) {
+  /* monochrome: 0 indicates not */
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+@media (orientation: portrait) {
+}
+@media (min-resolution: 240dpi) {
+}
+@media (hover: hover) {
+  article:hover {
+    background: #aaa;
+  }
+}
+@media (hover: none) {
+  /* any-hover: hover - test for any devices*/
+  article {
+    background: #bbb;
+  }
+}
+@media (pointer: fine) {
+  /* mouse - fine pointer */
+}
+@media (pointer: coarse) {
+  /* touch - coarse pointer */
+}
+@media screen and (orientation: portrait), (any-pointer: coarse) {
+}
+@media only screen {
+  /* for older browsers */
 }
