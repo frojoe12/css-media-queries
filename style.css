@@ -7,6 +7,10 @@
   --background-color: #eee;
   --text-color: #333;
   --warning-color: #eb6445;
+  --button-background-color: rgb(5, 199, 131);
+  --button-background-color-hover: rgb(0, 157, 120);
+  --button-text-color: rgba(255, 255, 255, 0.9);
+  --border-color: #ccc;
 }
 body {
   margin: 0;
@@ -16,20 +20,47 @@ body {
   background: var(--background-color);
   color: var(--text-color);
 }
+header {
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+  margin: 0;
+}
 .row {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  padding: 1rem;
 }
 article {
   flex-basis: 24%;
   padding: 1rem;
-  border: 1px solid var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+article h2 {
+  margin: 0;
+}
+article p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+article a {
+  display: block;
+  background: var(--button-background-color);
+  color: var(--button-text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s;
+}
+article a:hover {
+  background-color: var(--button-background-color-hover);
 }
 
 @media screen and (min-width: 800px) and (max-width: 900px) {
-  body {
-    background-color: var(--warning-color);
-  }
 }
