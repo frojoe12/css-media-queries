@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #eee;
+  --text-color: #333;
+  --warning-color: #eb6445;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+article {
+  flex-basis: 24%;
+  padding: 1rem;
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  body {
+    background-color: var(--warning-color);
+  }
+}
