@@ -5,12 +5,12 @@
 }
 :root {
   --background-color: #eee;
-  --text-color: #333;
+  --text-color: #444;
   --warning-color: #eb6445;
   --button-background-color: rgb(5, 199, 131);
   --button-background-color-hover: rgb(0, 157, 120);
   --button-text-color: rgba(255, 255, 255, 0.9);
-  --border-color: #ccc;
+  --border-color: #bbb;
 }
 body {
   margin: 0;
